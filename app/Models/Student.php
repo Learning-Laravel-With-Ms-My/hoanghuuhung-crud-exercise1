@@ -13,7 +13,7 @@ class Student extends Model
     protected $table = 'students';
     public $timestamps = false;
     public function getAll(){
-        return DB::table($this->table)->select('id','name','phone')->get();
+        return DB::table($this->table)->select('id','name','phone')->paginate(3);
     }
     public function insertData($data){
         return DB::table($this->table)->insert($data);

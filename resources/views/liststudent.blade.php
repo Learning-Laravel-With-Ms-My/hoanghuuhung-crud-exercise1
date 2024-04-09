@@ -37,6 +37,10 @@
 					@endforeach
 					</tbody>
 				</table>
+				<div class="d-flex">
+					<p>Hiển thị từ 1 đến 10 trong tổng số 14 dòng</p>
+					{{ $students->links() }}
+				</div>
 			</div>
 		</div>
 	</div>
